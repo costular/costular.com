@@ -1,2 +1,63 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@theme {
+  --font-display: 'Archivo Black', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --color-brutal-bg: #fff;
+  --color-brutal-text: #1a1a1a;
+  --color-primary: #59AC77;
+  --color-brutal-border: #000;
+  
+  --shadow-brutal: 4px 4px 0px 0px #000;
+  --shadow-brutal-hover: 2px 2px 0px 0px #000;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-brutal-bg);
+  color: var(--color-brutal-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Brutalist Utility Classes */
+.brutal-border {
+  border: 3px solid var(--color-brutal-border);
+}
+
+.brutal-shadow {
+  box-shadow: var(--shadow-brutal);
+}
+
+.brutal-btn {
+  display: inline-block;
+  border: 3px solid var(--color-brutal-border);
+  background-color: #fff;
+  color: #000;
+  padding: 1rem 2rem;
+  font-weight: 900;
+  box-shadow: var(--shadow-brutal);
+  transition: all 0.1s ease;
+  cursor: pointer;
+  border-radius: 0.5rem; /* rounded-lg */
+}
+
+.brutal-btn:hover {
+  background-color: var(--color-primary);
+  box-shadow: var(--shadow-brutal-hover);
+  transform: translate(2px, 2px);
+  border-radius: 0.5rem; /* rounded-lg */
+}
+
+.brutal-card {
+  border: 3px solid var(--color-brutal-border);
+  padding: 2rem;
+  background: #fff;
+  box-shadow: var(--shadow-brutal);
+  border-radius: 0.5rem; /* rounded-lg */
+}
