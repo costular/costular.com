@@ -1,72 +1,155 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import avatarImage from '../../public/diego-francisco-concepcion.webp';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import avatarImage from "../../public/diego-francisco-concepcion.webp";
 ---
 
-<Layout title="Diego | Software Engineer" description="Welcome to my personal website. I am Diego Francisco Concepción, a software engineer passionate about building great things.">
-	<section class="flex flex-col md:flex-row items-center md:items-start gap-12 mt-10">
-		<div class="flex-shrink-0 relative order-first md:order-last w-64 h-64 lg:w-96 lg:h-96 max-w-sm md:w-80 md:h-80">
-            <div class="absolute inset-0 bg-black translate-x-4 translate-y-4 rounded-full"></div>
-			<Image 
-				src={avatarImage} 
+<Layout
+	title="Diego | Android Developer & Tech Enthusiast"
+	description="Android & Backend developer with 10+ years of experience. I write about coding, home automation, and my homelab experiments."
+>
+	<section
+		class="flex flex-col md:flex-row items-center md:items-start gap-12 md:mt-10"
+	>
+		<div
+			class="flex-shrink-0 relative order-first md:order-last w-64 h-64 lg:w-96 lg:h-96 max-w-sm md:w-80 md:h-80"
+		>
+			<div
+				class="absolute inset-0 bg-black translate-x-4 translate-y-4 rounded-full"
+			>
+			</div>
+			<Image
+				src={avatarImage}
 				width={320}
 				height={320}
-				alt="Diego Francisco Concepción" 
+				alt="Diego Francisco Concepción"
 				class="relative w-full h-full border-4 border-black object-cover transition-all duration-300 hover:scale-105 hover:rotate-3 hover:shadow-[8px_8px_0px_0px_var(--color-primary)] rounded-full"
 			/>
 		</div>
 
 		<div class="flex-1 space-y-8">
-			<h1 class="text-6xl md:text-8xl font-black leading-none break-words">
-				Hello,<br/> I'm <span class="bg-primary px-2">Diego</span>.
+			<h1
+				class="text-6xl md:text-8xl font-black leading-none break-words"
+			>
+				<span class="bg-primary px-2">Diego</span> Francisco Concepción
 			</h1>
 			<div class="space-y-4 border-l-8 border-black pl-6">
-				<p class="text-xl md:text-2xl font-bold leading-relaxed max-w-2xl">
-					I am a developer with over 10 years of experience building Android apps. I also have backend experience using Python with Django and Flask, and more recently Spring Boot with Kotlin. Since I am curious by nature, I have also played around with web development using React, Astro, and even Vue. On top of that, I have created desktop applications using Python with Qt and Java with JavaFX.
-				</p>
-				
-				<p class="text-xl md:text-2xl font-bold leading-relaxed max-w-2xl">
-					Beyond coding, I am really passionate about computers. I love home automation and use my homelab with Home Assistant to automate my daily routines. I also enjoy tinkering with services like Pihole, TrueNAS, Immich, and other self hosted tools just for learning purposes.
+				<p
+					class="text-xl md:text-2xl font-bold leading-relaxed max-w-2xl"
+				>
+					Hi! 😊<br/>I am a developer with over 10 years of experience building
+					Android apps. I also have backend experience using Python
+					with Django and Flask, and more recently Spring Boot with
+					Kotlin. Since I am curious by nature, I have also played
+					around with web development using React, Astro, and even
+					Vue. On top of that, I have created desktop applications
+					using Python with Qt and Java with JavaFX.
 				</p>
 
-				<p class="text-xl md:text-2xl font-bold leading-relaxed max-w-2xl">
-					Finally, I love technology in general, so I sometimes write about it. I even started a podcast back in 2018, way before everyone else did. I eventually hung up the mic, so I will never know if I was about to hit the jackpot or if I just saved the internet from yet another tech podcast.
+				<p
+					class="text-xl md:text-2xl font-bold leading-relaxed max-w-2xl"
+				>
+					Beyond coding, I am really passionate about computers. I
+					love home automation and use my homelab with Home Assistant
+					to automate my daily routines. I also enjoy tinkering with
+					services like Pihole, TrueNAS, Immich, and other self hosted
+					tools just for learning purposes.
 				</p>
 
-				<p class="text-xl md:text-2xl font-bold leading-relaxed max-w-2xl">
-					I write about all of this in my blog, plus a lot of other things I left out to not sound too geeky.
+				<p
+					class="text-xl md:text-2xl font-bold leading-relaxed max-w-2xl"
+				>
+					Finally, I love technology in general, so I sometimes write
+					about it. I even started a podcast back in 2018, way before
+					everyone else did. I eventually hung up the mic, so I will
+					never know if I was about to hit the jackpot or if I just
+					saved the internet from yet another tech podcast.
+				</p>
+
+				<p
+					class="text-xl md:text-2xl font-bold leading-relaxed max-w-2xl"
+				>
+					I write about all of this in my blog, plus a lot of other
+					things I left out to not sound too geeky.
 				</p>
 			</div>
-			
-			<div class="flex flex-wrap gap-6 pt-6 justify-center md:justify-start">
-				<a href="https://github.com" target="_blank" rel="noopener noreferrer" class="brutal-btn bg-black text-white hover:bg-gray-800 p-4 transition-transform hover:scale-110 hover:rotate-6" aria-label="GitHub">
-					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
+
+			<div
+				class="flex flex-wrap gap-6 pt-6 justify-center md:justify-start"
+			>
+				<a
+					href="https://github.com/costular"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="brutal-btn bg-black text-white hover:bg-gray-800 p-4 transition-transform hover:scale-110 hover:rotate-6"
+					aria-label="GitHub"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="32"
+						height="32"
+						viewBox="0 0 24 24"
+						fill="currentColor"
+					>
+						<path
+							d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+						></path>
+					</svg>
 				</a>
-				                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="brutal-btn bg-black text-white hover:bg-gray-800 p-4 transition-transform hover:scale-110 hover:-rotate-6" aria-label="X">
-									<svg width="32" height="32" viewBox="0 0 1200 1227" fill="currentColor">
-				                        <path d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"/>
-				                    </svg>
-								</a>				<a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="brutal-btn bg-blue-700 text-white hover:bg-blue-800 p-4 transition-transform hover:scale-110 hover:rotate-6" aria-label="LinkedIn">
-					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
-                    </svg>
+				<a
+					href="https://x.com/costulardev"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="brutal-btn bg-black text-white hover:bg-gray-800 p-4 transition-transform hover:scale-110 hover:-rotate-6"
+					aria-label="X"
+				>
+					<svg
+						width="32"
+						height="32"
+						viewBox="0 0 1200 1227"
+						fill="currentColor"
+					>
+						<path
+							d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"
+						></path>
+					</svg>
+				</a>
+				<a
+					href="https://www.linkedin.com/in/diegofranciscoconcepcion/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="brutal-btn bg-blue-700 text-white hover:bg-blue-800 p-4 transition-transform hover:scale-110 hover:rotate-6"
+					aria-label="LinkedIn"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="32"
+						height="32"
+						viewBox="0 0 24 24"
+						fill="currentColor"
+					>
+						<path
+							d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+						></path>
+					</svg>
 				</a>
 			</div>
 		</div>
 	</section>
 
-    <section class="mt-32 pt-16">
-        <h2 class="text-5xl font-black mb-12 flex items-center gap-4">
-            <span class="w-8 h-8 bg-black block"></span>
-            Latest from the Blog
-        </h2>
-        
-        <div class="brutal-card bg-primary mb-12 transform -rotate-1 hover:rotate-0 transition-transform">
-             <p class="text-2xl font-bold mb-4 text-black">I write about software development, my homelab, and tech.</p>
-             <a href="/blog" class="brutal-btn mt-4">Read my blog &rarr;</a>
-        </div>
-    </section>
+	<section class="mt-32 pt-16">
+		<h2 class="text-5xl font-black mb-12 flex items-center gap-4">
+			<span class="w-8 h-8 bg-black block"></span>
+			Latest from the Blog
+		</h2>
+
+		<div
+			class="brutal-card bg-primary mb-12 transform -rotate-1 hover:rotate-0 transition-transform"
+		>
+			<p class="text-2xl font-bold mb-4 text-black">
+				I write about software development, my homelab, and tech.
+			</p>
+			<a href="/blog" class="brutal-btn mt-4">Read my blog &rarr;</a>
+		</div>
+	</section>
 </Layout>
