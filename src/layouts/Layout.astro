@@ -1,0 +1,63 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+    image?: string;
+}
+
+const { title, description = "A simple, fast, and modern website.", image = "/blog-placeholder-1.jpg" } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href={canonicalURL} />
+
+        <!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={new URL(image, Astro.url)} />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={Astro.url} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={new URL(image, Astro.url)} />
+	</head>
+	<body class="bg-gray-50 text-gray-900 font-sans antialiased flex flex-col min-h-screen">
+		<header class="w-full py-6 px-6 lg:px-16 flex justify-between items-center max-w-7xl mx-auto">
+			<a href="/" class="text-2xl font-bold tracking-tighter hover:text-blue-600 transition-colors">
+				Diego.
+			</a>
+			<nav class="flex gap-6 text-lg font-medium">
+				<a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+				<a href="/blog" class="hover:text-blue-600 transition-colors">Blog</a>
+			</nav>
+		</header>
+
+		<main class="flex-grow w-full px-6 lg:px-16 max-w-7xl mx-auto py-12">
+			<slot />
+		</main>
+
+		<footer class="w-full py-8 px-6 text-center text-gray-500 border-t border-gray-200 mt-auto">
+			<p>&copy; {new Date().getFullYear()} Diego. All rights reserved.</p>
+		</footer>
+	</body>
+</html>

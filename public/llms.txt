@@ -1,0 +1,20 @@
+# Diego's Personal Website
+
+## Home
+- URL: /
+- Description: Personal portfolio and introduction for Diego, a software engineer. Contains social links (GitHub, Twitter, LinkedIn) and a brief bio.
+
+## Blog
+- URL: /blog
+- Description: A collection of technical articles and thoughts on software engineering, web development, and productivity.
+
+### Recent Posts
+- URL: /blog/hello-world
+- Description: An introductory post welcoming readers to the new blog.
+- URL: /blog/future-of-web-dev
+- Description: Insights into upcoming trends in web development like Edge Computing and AI.
+
+## Contact
+- GitHub: https://github.com
+- Twitter: https://twitter.com
+- LinkedIn: https://linkedin.com
