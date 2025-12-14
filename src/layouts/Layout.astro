@@ -41,6 +41,21 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
+        <script type="application/ld+json" is:inline>
+            {JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'Person',
+                name: 'Diego Francisco Concepción',
+                alternateName: 'costular',
+                url: Astro.site?.toString() ?? canonicalURL.toString(),
+                sameAs: [
+                    'https://github.com/costular',
+                    'https://x.com/costulardev',
+                    'https://www.linkedin.com/in/diegofranciscoconcepcion/',
+                ],
+            })}
+        </script>
+
         <script is:inline>
             const storageKey = 'costular-theme';
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
@@ -86,9 +101,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 	</head>
 	<body class="bg-brutal text-brutal font-sans antialiased flex flex-col min-h-screen px-4 transition-colors duration-200">
 		<header class="container mx-auto py-8 px-6 border-b-4 border-brutal bg-surface flex flex-col md:flex-row justify-between items-center gap-6 rounded-xl">
-			<a href="/" class="text-4xl font-black tracking-tighter hover:bg-ink hover:text-ink-contrast px-2 transition-all rounded-lg">
-				costular
-			</a>
+			<div class="flex flex-col items-start gap-2">
+				<p class="text-sm font-bold leading-tight text-muted tracking-wide px-2">
+					Diego Francisco Concepción aka
+				</p>
+				<a href="/" rel="author" class="text-4xl font-black tracking-tighter hover:bg-ink hover:text-ink-contrast px-2 transition-all rounded-lg">
+					costular
+				</a>
+			</div>
 			<nav class="flex gap-6 text-xl font-bold items-center">
 				<a href="/" class="hover:underline decoration-4 underline-offset-4 decoration-primary px-1">Home</a>
 				<a href="/blog" class="hover:underline decoration-4 underline-offset-4 decoration-primary px-1">Blog</a>
