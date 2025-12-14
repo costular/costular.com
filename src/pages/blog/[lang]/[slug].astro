@@ -1,12 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
-import { calculateReadingTime } from '../../utils/readingTime';
+import Layout from '../../../layouts/Layout.astro';
+import { calculateReadingTime } from '../../../utils/readingTime';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
 	return posts.map((post) => ({
-		params: { slug: post.slug },
+		params: { lang: post.data.lang, slug: post.slug },
 		props: post,
 	}));
 }
@@ -16,12 +16,12 @@ const { Content } = await post.render();
 const readingTime = calculateReadingTime(post.body || "");
 ---
 
-<Layout title={post.data.title} description={post.data.description}>
+<Layout title={post.data.title} description={post.data.description} lang={post.data.lang}>
 	<article class="max-w-4xl mx-auto">
-        <header class="mb-16 border-b-4 border-muted pb-6">
+        <header class="mb-16 border-b-4 border-gray-300 pb-6">
             <h1 class="text-4xl md:text-5xl font-black leading-tight mb-4">{post.data.title}</h1>
             
-            <div class="flex items-center gap-4 text-muted font-bold text-lg mb-4">
+            <div class="flex items-center gap-4 text-gray-600 font-bold text-lg mb-4">
                 <time datetime={post.data.pubDate.toISOString()}>
                     {post.data.pubDate.toLocaleDateString('en-us', {
                         year: 'numeric',
