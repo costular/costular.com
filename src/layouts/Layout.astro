@@ -134,8 +134,21 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 			<slot />
 		</main>
 
-		<footer class="container mx-auto px-6 py-12 text-center border-t-4 border-brutal bg-surface rounded-xl">
-			<p class="font-bold text-xl text-muted tracking-widest">It's {new Date().getFullYear()}. No rights reserved.</p>
+		<footer class="container mx-auto px-6 py-8 text-center border-t-4 border-brutal bg-surface rounded-xl space-y-2">
+			<p class="font-semibold text-base text-muted tracking-tight">
+				Costular.com © {new Date().getFullYear()}
+			</p>
+			<p class="text-sm font-medium text-brutal">
+				Content CC BY-SA 4.0 | Code MIT | Contact:
+				<a href="mailto:costular@gmail.com" class="underline decoration-2 underline-offset-4 decoration-primary">
+					costular@gmail.com
+				</a>
+			</p>
+			<div class="flex flex-wrap justify-center gap-4 text-sm font-semibold">
+				<a href="/aviso-legal" class="hover:underline decoration-2 underline-offset-4 decoration-primary px-1">Legal Notice</a>
+				<a href="/politica-privacidad" class="hover:underline decoration-2 underline-offset-4 decoration-primary px-1">Privacy Policy</a>
+			</div>
+			<p class="text-xs text-muted italic">Fueled by matcha.</p>
 		</footer>
 	</body>
 </html>
