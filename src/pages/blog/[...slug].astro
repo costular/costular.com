@@ -18,10 +18,10 @@ const readingTime = calculateReadingTime(post.body || "");
 
 <Layout title={post.data.title} description={post.data.description}>
 	<article class="max-w-4xl mx-auto">
-        <header class="mb-16 border-b-4 border-gray-300 pb-6">
+        <header class="mb-16 border-b-4 border-muted pb-6">
             <h1 class="text-4xl md:text-5xl font-black leading-tight mb-4">{post.data.title}</h1>
             
-            <div class="flex items-center gap-4 text-gray-600 font-bold text-lg mb-4">
+            <div class="flex items-center gap-4 text-muted font-bold text-lg mb-4">
                 <time datetime={post.data.pubDate.toISOString()}>
                     {post.data.pubDate.toLocaleDateString('en-us', {
                         year: 'numeric',
@@ -37,13 +37,13 @@ const readingTime = calculateReadingTime(post.body || "");
             
             {post.data.heroImage && (
                 <div class="relative mt-8">
-                     <div class="absolute inset-0 bg-black translate-x-3 translate-y-3 rounded-lg"></div>
-                    <img width={1020} height={510} src={post.data.heroImage} alt="" class="relative border-4 border-black w-full rounded-lg" />
+                     <div class="absolute inset-0 bg-ink translate-x-3 translate-y-3 rounded-lg"></div>
+                    <img width={1020} height={510} src={post.data.heroImage} alt="" class="relative border-4 border-brutal w-full rounded-lg" />
                 </div>
             )}
         </header>
         
-		<div class="prose prose-xl prose-neutral max-w-none prose-headings:font-black prose-p:font-medium prose-a:text-primary prose-a:font-bold prose-img:border-4 prose-img:border-black prose-img:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] prose-img:rounded-lg mt-12">
+		<div class="prose prose-xl prose-neutral max-w-none prose-headings:font-black prose-p:font-medium prose-a:text-primary prose-a:font-bold prose-img:border-4 prose-img:shadow-[8px_8px_0px_0px_var(--color-shadow-color)] prose-img:rounded-lg mt-12">
 			<Content />
 		</div>
 	</article>

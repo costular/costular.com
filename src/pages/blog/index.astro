@@ -10,23 +10,23 @@ const posts = (await getCollection('blog')).sort(
 
 <Layout title="Blog | Diego" description="Read my thoughts on software engineering and more.">
 	<section>
-		<h1 class="text-4xl md:text-5xl font-black mb-16 border-b-8 border-black pb-8">Blog</h1>
+		<h1 class="text-4xl md:text-5xl font-black mb-16 border-b-8 border-brutal pb-8">Blog</h1>
 		<ul class="space-y-12">
 			{
 				posts.map((post) => (
 					<li class="relative">
                         <a href={`/blog/${post.slug}/`} class="block group">
-                            <div class="absolute inset-0 bg-black translate-x-2 translate-y-2 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform rounded-lg"></div>
-                            <article class="relative bg-white border-4 border-black p-8 group-hover:-translate-y-1 group-hover:-translate-x-1 transition-transform rounded-lg">
+                            <div class="absolute inset-0 bg-ink translate-x-2 translate-y-2 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform rounded-lg"></div>
+                            <article class="relative bg-surface border-4 border-brutal p-8 group-hover:-translate-y-1 group-hover:-translate-x-1 transition-transform rounded-lg">
                                 <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-4 gap-2">
                                     <h2 class="text-3xl md:text-4xl font-black group-hover:text-primary transition-colors">
                                         {post.data.title}
                                     </h2>
                                     <div class="flex items-center gap-4">
-                                        <span class="font-bold text-gray-500 text-sm tracking-wide">
+                                        <span class="font-bold text-muted text-sm tracking-wide">
                                             {calculateReadingTime(post.body || "")}
                                         </span>
-                                        <time datetime={post.data.pubDate.toISOString()} class="font-bold bg-primary text-black px-2 py-1 border-2 border-black whitespace-nowrap rounded-lg">
+                                        <time datetime={post.data.pubDate.toISOString()} class="font-bold bg-primary text-primary-foreground px-2 py-1 border-2 border-brutal whitespace-nowrap rounded-lg">
                                             {post.data.pubDate.toLocaleDateString('en-us', {
                                                 year: 'numeric',
                                                 month: 'short',
@@ -35,7 +35,7 @@ const posts = (await getCollection('blog')).sort(
                                         </time>
                                     </div>
                                 </div>
-                                <p class="text-xl font-bold text-gray-800 leading-relaxed border-l-4 border-gray-300 pl-4">
+                                <p class="text-xl font-bold text-brutal leading-relaxed border-l-4 border-muted pl-4">
                                     {post.data.description}
                                 </p>
                             </article>
