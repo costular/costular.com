@@ -41,20 +41,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-        <script type="application/ld+json" is:inline>
-            {JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'Person',
-                name: 'Diego Francisco Concepción',
-                alternateName: 'costular',
-                url: Astro.site?.toString() ?? canonicalURL.toString(),
-                sameAs: [
-                    'https://github.com/costular',
-                    'https://x.com/costulardev',
-                    'https://www.linkedin.com/in/diegofranciscoconcepcion/',
-                ],
-            })}
-        </script>
+        <script type="application/ld+json" is:inline set:html={JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Diego Francisco Concepción',
+            alternateName: 'costular',
+            url: Astro.site?.toString() ?? canonicalURL.toString(),
+            sameAs: [
+                'https://github.com/costular',
+                'https://x.com/costulardev',
+                'https://www.linkedin.com/in/diegofranciscoconcepcion/',
+            ],
+        })} />
 
         <script is:inline>
             const storageKey = 'costular-theme';
