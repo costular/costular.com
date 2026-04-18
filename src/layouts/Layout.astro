@@ -98,17 +98,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             });
         </script>
 	</head>
-	<body class="bg-brutal text-brutal font-sans antialiased flex flex-col min-h-screen px-4 transition-colors duration-200">
+	<body class="bg-brutal text-brutal antialiased flex flex-col min-h-screen px-4 transition-colors duration-200">
 		<header class="container mx-auto py-8 px-6 border-b-4 border-brutal bg-surface flex flex-col md:flex-row justify-between items-center gap-6 rounded-xl">
 			<div class="flex flex-col items-start gap-2">
-				<p class="text-sm font-bold leading-tight text-muted tracking-wide px-2">
+				<p class="text-sm font-medium leading-tight text-muted tracking-wide px-2">
 					Diego Francisco Concepción aka
 				</p>
-				<a href="/" rel="author" class="text-4xl font-black tracking-tighter hover:bg-ink hover:text-ink-contrast px-2 transition-all rounded-lg">
+				<a href="/" rel="author" class="text-4xl font-extrabold tracking-tighter hover:bg-ink hover:text-ink-contrast px-2 transition-all rounded-lg">
 					costular
 				</a>
 			</div>
-			<nav class="flex gap-6 text-xl font-bold items-center">
+			<nav class="flex gap-6 text-xl font-medium items-center">
 				<a href="/" class="hover:underline decoration-4 underline-offset-4 decoration-primary px-1">Home</a>
 				<a href="/blog" class="hover:underline decoration-4 underline-offset-4 decoration-primary px-1">Blog</a>
                 <button
@@ -134,7 +134,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		</main>
 
 		<footer class="container mx-auto px-6 py-8 text-center border-t-4 border-brutal bg-surface rounded-xl space-y-2">
-			<p class="font-semibold text-base text-muted tracking-tight">
+			<p class="font-medium text-base text-muted tracking-tight">
 				Costular.com © {new Date().getFullYear()}
 			</p>
 			<p class="text-sm font-medium text-brutal">
@@ -143,7 +143,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 					costular@gmail.com
 				</a>
 			</p>
-			<div class="flex flex-wrap justify-center gap-4 text-sm font-semibold">
+			<div class="flex flex-wrap justify-center gap-4 text-sm font-medium">
 				<a href="/aviso-legal" class="hover:underline decoration-2 underline-offset-4 decoration-primary px-1">Legal Notice</a>
 				<a href="/politica-privacidad" class="hover:underline decoration-2 underline-offset-4 decoration-primary px-1">Privacy Policy</a>
 			</div>
